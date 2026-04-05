@@ -32,7 +32,6 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
 dependencies = [
-    "deepeval>=0.21.0",
     "pytest>=7.0.0",
     "rich>=13.0.0",
     "pyyaml>=6.0",
@@ -41,6 +40,9 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+engine = [
+    "deepeval>=2.0",
+]
 dev = [
     "pytest>=7.0.0",
     "pytest-cov>=4.0.0",
