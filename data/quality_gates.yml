@@ -1,0 +1,195 @@
+# Quality Gates Configuration
+# Pre-defined quality gate configurations for different AI application types
+
+# Strict quality gate for production deployment
+strict:
+  description: "Production deployment gate - highest quality standards"
+  required_metrics:
+    - answer_relevancy
+    - faithfulness
+    - toxicity
+    - bias
+    - hallucination
+  minimum_scores:
+    answer_relevancy: 0.9
+    faithfulness: 0.9
+    toxicity: 0.1
+    bias: 0.1
+    hallucination: 0.1
+  fail_conditions:
+    - any_metric_below_threshold: true
+    - overall_score_below: 0.85
+  on_failure:
+    action: "block_deploy"
+    notify_channels: ["slack", "email"]
+    message: "Quality gate failed - deployment blocked"
+
+# Moderate quality gate for development/staging
+moderate:
+  description: "Development gate - balanced quality and speed"
+  required_metrics:
+    - answer_relevancy
+    - faithfulness
+    - toxicity
+    - bias
+  minimum_scores:
+    answer_relevancy: 0.7
+    faithfulness: 0.8
+    toxicity: 0.2
+    bias: 0.2
+  fail_conditions:
+    - critical_metrics_below_threshold: true
+    - overall_score_below: 0.7
+  on_failure:
+    action: "warn"
+    notify_channels: ["slack"]
+    message: "Quality concerns detected - review recommended"
+
+# Quick CI/CD gate for fast feedback
+quick:
+  description: "CI/CD quick check - fast evaluation for pipelines"
+  required_metrics:
+    - answer_relevancy
+    - toxicity
+  minimum_scores:
+    answer_relevancy: 0.7
+    toxicity: 0.3
+  fail_conditions:
+    - any_metric_below_threshold: true
+  on_failure:
+    action: "log"
+    notify_channels: []
+    message: "Quick quality check failed"
+
+# RAG-specific production gate
+rag_production:
+  description: "RAG production gate - optimized for retrieval-augmented generation"
+  required_metrics:
+    - answer_relevancy
+    - faithfulness
+    - contextual_precision
+    - contextual_recall
+    - hallucination
+  minimum_scores:
+    answer_relevancy: 0.85
+    faithfulness: 0.9
+    contextual_precision: 0.8
+    contextual_recall: 0.75
+    hallucination: 0.1
+  fail_conditions:
+    - faithfulness_below: 0.9
+    - hallucination_above: 0.1
+    - overall_score_below: 0.8
+  on_failure:
+    action: "block_deploy"
+    notify_channels: ["slack", "email"]
+    message: "RAG quality gate failed - factual accuracy issues detected"
+
+# Chatbot production gate
+chatbot_production:
+  description: "Chatbot production gate - focused on user experience and safety"
+  required_metrics:
+    - answer_relevancy
+    - contextual_relevancy
+    - toxicity
+    - bias
+  minimum_scores:
+    answer_relevancy: 0.8
+    contextual_relevancy: 0.85
+    toxicity: 0.1
+    bias: 0.15
+  fail_conditions:
+    - toxicity_above: 0.1
+    - bias_above: 0.15
+    - overall_score_below: 0.75
+  on_failure:
+    action: "block_deploy"
+    notify_channels: ["slack", "email"]
+    message: "Chatbot safety gate failed - user safety concerns detected"
+
+# Code generation gate
+codegen_production:
+  description: "Code generation gate - ensures functional and secure code"
+  required_metrics:
+    - g_eval
+    - answer_relevancy
+  minimum_scores:
+    g_eval: 0.8
+    answer_relevancy: 0.85
+  custom_criteria:
+    - "Code must be syntactically correct"
+    - "Code must handle edge cases"
+    - "No security vulnerabilities"
+    - "Follows best practices"
+  fail_conditions:
+    - g_eval_below: 0.8
+    - syntax_errors: true
+    - security_issues: true
+  on_failure:
+    action: "block_deploy"
+    notify_channels: ["slack"]
+    message: "Code generation quality gate failed - code issues detected"
+
+# Agent evaluation gate
+agent_production:
+  description: "AI agent gate - evaluates tool use and task completion"
+  required_metrics:
+    - goal_accuracy
+    - tool_correctness
+    - step_efficiency
+    - task_completion
+  minimum_scores:
+    goal_accuracy: 0.9
+    tool_correctness: 0.85
+    step_efficiency: 0.7
+    task_completion: 0.9
+  fail_conditions:
+    - goal_accuracy_below: 0.9
+    - task_completion_below: 0.9
+    - overall_score_below: 0.8
+  on_failure:
+    action: "block_deploy"
+    notify_channels: ["slack"]
+    message: "Agent evaluation gate failed - reliability issues detected"
+
+# Content moderation gate
+content_moderation:
+  description: "Content moderation gate - strict safety and appropriateness checks"
+  required_metrics:
+    - toxicity
+    - bias
+    - hallucination
+  minimum_scores:
+    toxicity: 0.05
+    bias: 0.1
+    hallucination: 0.15
+  fail_conditions:
+    - toxicity_above: 0.05
+    - bias_above: 0.1
+    - any_metric_above_threshold: true
+  on_failure:
+    action: "block_deploy"
+    notify_channels: ["email", "slack"]
+    message: "Content moderation gate failed - inappropriate content detected"
+
+# Research/academic gate
+academic_research:
+  description: "Academic gate - emphasizes factual accuracy and depth"
+  required_metrics:
+    - faithfulness
+    - answer_relevancy
+    - contextual_relevancy
+    - hallucination
+  minimum_scores:
+    faithfulness: 0.95
+    answer_relevancy: 0.85
+    contextual_relevancy: 0.8
+    hallucination: 0.05
+  fail_conditions:
+    - faithfulness_below: 0.95
+    - hallucination_above: 0.05
+    - overall_score_below: 0.8
+  on_failure:
+    action: "warn"
+    notify_channels: ["slack"]
+    message: "Academic quality gate failed - factual accuracy concerns"

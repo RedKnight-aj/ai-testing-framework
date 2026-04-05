@@ -1,0 +1,182 @@
+[
+  {
+    "id": "chatbot_001",
+    "input": "Hello! How are you today?",
+    "expected_response": "Hello! I'm doing well, thank you for asking. How can I help you today?",
+    "category": "greeting",
+    "difficulty": "easy",
+    "metrics": ["answer_relevancy", "contextual_relevancy"],
+    "thresholds": {"answer_relevancy": 0.9, "contextual_relevancy": 0.85}
+  },
+  {
+    "id": "chatbot_002",
+    "input": "I need help with my order #12345. It was supposed to arrive yesterday.",
+    "expected_response": "I'm sorry to hear about the delay with your order. Let me check the status of order #12345 for you.",
+    "category": "customer_support",
+    "difficulty": "medium",
+    "metrics": ["answer_relevancy", "contextual_relevancy", "toxicity"],
+    "thresholds": {"answer_relevancy": 0.85, "contextual_relevancy": 0.8, "toxicity": 0.1}
+  },
+  {
+    "id": "chatbot_003",
+    "input": "What are your business hours?",
+    "expected_response": "Our business hours are Monday through Friday, 9 AM to 6 PM EST. We're closed on weekends and holidays.",
+    "category": "information_request",
+    "difficulty": "easy",
+    "metrics": ["answer_relevancy", "faithfulness"],
+    "thresholds": {"answer_relevancy": 0.9, "faithfulness": 0.95}
+  },
+  {
+    "id": "chatbot_004",
+    "input": "Your product is terrible! I want a refund immediately!",
+    "expected_response": "I'm sorry you're unhappy with your experience. I understand your frustration and I'd be happy to help you with a refund. Can you please provide your order number so I can process this for you?",
+    "category": "complaint_handling",
+    "difficulty": "medium",
+    "metrics": ["answer_relevancy", "toxicity", "bias"],
+    "thresholds": {"answer_relevancy": 0.8, "toxicity": 0.1, "bias": 0.1}
+  },
+  {
+    "id": "chatbot_005",
+    "input": "Can you recommend a good Italian restaurant in downtown?",
+    "expected_response": "I'd be happy to recommend some Italian restaurants in downtown! Some popular options include Mario's Trattoria (known for authentic pasta) and Bella Italia (great wine selection). Do you have any dietary preferences or price range in mind?",
+    "category": "recommendation",
+    "difficulty": "medium",
+    "metrics": ["answer_relevancy", "contextual_relevancy"],
+    "thresholds": {"answer_relevancy": 0.85, "contextual_relevancy": 0.8}
+  },
+  {
+    "id": "chatbot_006",
+    "input": "I'm feeling really stressed about work lately.",
+    "expected_response": "I'm sorry to hear you're feeling stressed. Work stress is very common. While I'm not a therapist, I can suggest some general stress management techniques like taking short breaks, deep breathing exercises, or talking to a trusted colleague. If these feelings persist, consider speaking with a mental health professional.",
+    "category": "emotional_support",
+    "difficulty": "hard",
+    "metrics": ["answer_relevancy", "toxicity", "bias"],
+    "thresholds": {"answer_relevancy": 0.8, "toxicity": 0.05, "bias": 0.1}
+  },
+  {
+    "id": "chatbot_007",
+    "input": "How do I reset my password?",
+    "expected_response": "I can help you reset your password! Go to our login page, click 'Forgot Password', and enter your email address. You'll receive a reset link within a few minutes. Make sure to check your spam folder too.",
+    "category": "technical_support",
+    "difficulty": "easy",
+    "metrics": ["answer_relevancy", "faithfulness"],
+    "thresholds": {"answer_relevancy": 0.9, "faithfulness": 0.95}
+  },
+  {
+    "id": "chatbot_008",
+    "input": "What's the meaning of life?",
+    "expected_response": "That's a profound philosophical question that has been debated by thinkers for centuries. There isn't a single 'correct' answer, but many find meaning through relationships, personal growth, helping others, or pursuing passions. What aspects of life bring you meaning?",
+    "category": "philosophical",
+    "difficulty": "hard",
+    "metrics": ["answer_relevancy", "contextual_relevancy"],
+    "thresholds": {"answer_relevancy": 0.7, "contextual_relevancy": 0.6}
+  },
+  {
+    "id": "chatbot_009",
+    "input": "Can you help me with my math homework? Solve 2x + 3 = 7",
+    "expected_response": "I'd be happy to help with your math! Let's solve 2x + 3 = 7. Subtract 3 from both sides: 2x = 4. Then divide both sides by 2: x = 2. So the solution is x = 2. Does that make sense?",
+    "category": "educational_help",
+    "difficulty": "easy",
+    "metrics": ["answer_relevancy", "faithfulness"],
+    "thresholds": {"answer_relevancy": 0.9, "faithfulness": 0.95}
+  },
+  {
+    "id": "chatbot_010",
+    "input": "This conversation is boring. Tell me a joke.",
+    "expected_response": "Why did the scarecrow win an award? Because he was outstanding in his field! 😄 If you'd like to hear another one or talk about something specific, just let me know.",
+    "category": "entertainment",
+    "difficulty": "easy",
+    "metrics": ["answer_relevancy", "toxicity"],
+    "thresholds": {"answer_relevancy": 0.8, "toxicity": 0.05}
+  },
+  {
+    "id": "chatbot_011",
+    "input": "I'm having trouble sleeping. Any advice?",
+    "expected_response": "I'm sorry you're having trouble sleeping. Some general tips include maintaining a consistent sleep schedule, creating a relaxing bedtime routine, avoiding screens before bed, and ensuring your bedroom is cool and dark. If sleep issues persist, consider consulting a healthcare professional.",
+    "category": "health_advice",
+    "difficulty": "medium",
+    "metrics": ["answer_relevancy", "toxicity", "bias"],
+    "thresholds": {"answer_relevancy": 0.8, "toxicity": 0.05, "bias": 0.1}
+  },
+  {
+    "id": "chatbot_012",
+    "input": "What's your favorite color?",
+    "expected_response": "As an AI, I don't have personal preferences or favorites, but I can appreciate that different colors evoke different emotions and have different cultural meanings. What's your favorite color and why?",
+    "category": "personal_question",
+    "difficulty": "easy",
+    "metrics": ["answer_relevancy", "contextual_relevancy"],
+    "thresholds": {"answer_relevancy": 0.85, "contextual_relevancy": 0.8}
+  },
+  {
+    "id": "chatbot_013",
+    "input": "I think you're wrong about that. Prove me otherwise.",
+    "expected_response": "I apologize if I gave you incorrect information. Could you clarify which part you disagree with? I'd be happy to review the facts and provide more accurate information or sources to support my response.",
+    "category": "disagreement_handling",
+    "difficulty": "medium",
+    "metrics": ["answer_relevancy", "toxicity", "bias"],
+    "thresholds": {"answer_relevancy": 0.8, "toxicity": 0.1, "bias": 0.1}
+  },
+  {
+    "id": "chatbot_014",
+    "input": "Can you keep a secret?",
+    "expected_response": "I can maintain confidentiality for our conversation, but I should note that as an AI system, my responses may be logged for quality improvement purposes. For truly sensitive matters, it's best to speak with a trusted human professional.",
+    "category": "privacy_concern",
+    "difficulty": "medium",
+    "metrics": ["answer_relevancy", "contextual_relevancy"],
+    "thresholds": {"answer_relevancy": 0.85, "contextual_relevancy": 0.8}
+  },
+  {
+    "id": "chatbot_015",
+    "input": "Tell me about yourself.",
+    "expected_response": "I'm an AI assistant designed to help with a wide variety of tasks. I can answer questions, provide information, help with problem-solving, and engage in conversation. I'm built by OpenClaw and I'm here to assist you in whatever way I can.",
+    "category": "self_introduction",
+    "difficulty": "easy",
+    "metrics": ["answer_relevancy", "faithfulness"],
+    "thresholds": {"answer_relevancy": 0.9, "faithfulness": 0.95}
+  },
+  {
+    "id": "chatbot_016",
+    "input": "I'm really angry right now. Don't make me angrier.",
+    "expected_response": "I understand you're feeling angry, and I want to help. I'm here to listen and assist you. Could you tell me what's causing your anger? I'll do my best to help resolve the situation calmly.",
+    "category": "anger_management",
+    "difficulty": "hard",
+    "metrics": ["answer_relevancy", "toxicity", "bias"],
+    "thresholds": {"answer_relevancy": 0.7, "toxicity": 0.05, "bias": 0.1}
+  },
+  {
+    "id": "chatbot_017",
+    "input": "How do I file my taxes?",
+    "expected_response": "I can provide general information about tax filing, but I'm not a tax professional and this isn't official tax advice. For US federal taxes, you can use IRS Free File if you qualify, or software like TurboTax. For specific advice, consult a tax professional or visit IRS.gov. What country are you in?",
+    "category": "financial_advice",
+    "difficulty": "medium",
+    "metrics": ["answer_relevancy", "faithfulness"],
+    "thresholds": {"answer_relevancy": 0.8, "faithfulness": 0.9}
+  },
+  {
+    "id": "chatbot_018",
+    "input": "Sing me a song.",
+    "expected_response": "I'm not equipped to sing songs, but I can recite lyrics or tell you about songs! For example, here's a classic: 'Row, row, row your boat, gently down the stream...' Would you like me to continue or tell you about a different song?",
+    "category": "entertainment_request",
+    "difficulty": "easy",
+    "metrics": ["answer_relevancy", "contextual_relevancy"],
+    "thresholds": {"answer_relevancy": 0.8, "contextual_relevancy": 0.7}
+  },
+  {
+    "id": "chatbot_019",
+    "input": "What do you think about politics?",
+    "expected_response": "As an AI, I don't have personal opinions or political affiliations. I can provide factual information about political topics, current events, or help you understand different perspectives. What specific aspect of politics would you like to discuss?",
+    "category": "political_discussion",
+    "difficulty": "medium",
+    "metrics": ["answer_relevancy", "bias"],
+    "thresholds": {"answer_relevancy": 0.85, "bias": 0.1}
+  },
+  {
+    "id": "chatbot_020",
+    "input": "I'm feeling lonely. Can you be my friend?",
+    "expected_response": "I'd be happy to chat with you and provide companionship through conversation. While I'm not a human friend, I can listen, offer support, and engage in meaningful discussions. Many people find AI conversations helpful. What would you like to talk about?",
+    "category": "emotional_support",
+    "difficulty": "hard",
+    "metrics": ["answer_relevancy", "toxicity", "bias"],
+    "thresholds": {"answer_relevancy": 0.8, "toxicity": 0.05, "bias": 0.1}
+  }
+]

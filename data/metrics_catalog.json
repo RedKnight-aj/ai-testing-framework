@@ -1,0 +1,324 @@
+{
+  "answer_relevancy": {
+    "name": "Answer Relevancy",
+    "description": "Measures how relevant the response is to the input query or prompt",
+    "score_range": [0, 1],
+    "recommended_thresholds": {
+      "high_quality": 0.9,
+      "acceptable": 0.7,
+      "minimum": 0.5
+    },
+    "when_to_use": [
+      "RAG systems",
+      "Question answering",
+      "Conversational AI",
+      "Search results",
+      "Any response-to-query evaluation"
+    ],
+    "when_not_to_use": [
+      "Open-ended creative generation",
+      "When relevance isn't the primary concern"
+    ],
+    "cost_per_evaluation": "Low - uses LLM calls",
+    "implementation_notes": "Compares semantic similarity between input and output"
+  },
+  "faithfulness": {
+    "name": "Faithfulness",
+    "description": "Measures whether the response is factually consistent with provided context or knowledge",
+    "score_range": [0, 1],
+    "recommended_thresholds": {
+      "high_quality": 0.9,
+      "acceptable": 0.8,
+      "minimum": 0.7
+    },
+    "when_to_use": [
+      "RAG systems with retrieval context",
+      "Factual question answering",
+      "Knowledge-based responses",
+      "Citation verification"
+    ],
+    "when_not_to_use": [
+      "Creative writing",
+      "Hypothetical scenarios",
+      "Opinion-based responses"
+    ],
+    "cost_per_evaluation": "Medium - requires context comparison",
+    "implementation_notes": "Verifies claims against provided context or known facts"
+  },
+  "contextual_precision": {
+    "name": "Contextual Precision",
+    "description": "Evaluates if all retrieved context pieces are relevant and contribute to the answer",
+    "score_range": [0, 1],
+    "recommended_thresholds": {
+      "high_quality": 0.85,
+      "acceptable": 0.7,
+      "minimum": 0.6
+    },
+    "when_to_use": [
+      "RAG systems",
+      "Information retrieval systems",
+      "Context-dependent generation"
+    ],
+    "when_not_to_use": [
+      "Non-retrieval based generation",
+      "When context quality isn't being evaluated"
+    ],
+    "cost_per_evaluation": "Medium - analyzes retrieved chunks",
+    "implementation_notes": "Assesses precision of retrieved context pieces"
+  },
+  "contextual_recall": {
+    "name": "Contextual Recall",
+    "description": "Measures if all relevant information from context is used in the response",
+    "score_range": [0, 1],
+    "recommended_thresholds": {
+      "high_quality": 0.9,
+      "acceptable": 0.75,
+      "minimum": 0.6
+    },
+    "when_to_use": [
+      "RAG systems",
+      "Comprehensive answer generation",
+      "When completeness matters"
+    ],
+    "when_not_to_use": [
+      "Concise response requirements",
+      "When brevity is prioritized"
+    ],
+    "cost_per_evaluation": "Medium - compares response to context",
+    "implementation_notes": "Checks if response utilizes all relevant context"
+  },
+  "contextual_relevancy": {
+    "name": "Contextual Relevancy",
+    "description": "Assesses if the response is relevant given the conversation or task context",
+    "score_range": [0, 1],
+    "recommended_thresholds": {
+      "high_quality": 0.9,
+      "acceptable": 0.75,
+      "minimum": 0.6
+    },
+    "when_to_use": [
+      "Conversational AI",
+      "Multi-turn dialogues",
+      "Context-dependent tasks"
+    ],
+    "when_not_to_use": [
+      "Single-turn, context-free tasks",
+      "When context doesn't influence quality"
+    ],
+    "cost_per_evaluation": "Low to Medium",
+    "implementation_notes": "Evaluates response appropriateness for given context"
+  },
+  "summarization_score": {
+    "name": "Summarization Score",
+    "description": "Evaluates quality of text summarization including coverage, conciseness, and coherence",
+    "score_range": [0, 1],
+    "recommended_thresholds": {
+      "high_quality": 0.85,
+      "acceptable": 0.7,
+      "minimum": 0.6
+    },
+    "when_to_use": [
+      "Text summarization tasks",
+      "Document condensation",
+      "Key point extraction"
+    ],
+    "when_not_to_use": [
+      "When full detail is required",
+      "Non-summarization tasks"
+    ],
+    "cost_per_evaluation": "Medium - requires detailed analysis",
+    "implementation_notes": "Assesses coverage, conciseness, and factual accuracy"
+  },
+  "toxicity": {
+    "name": "Toxicity",
+    "description": "Detects harmful, offensive, or inappropriate content in responses",
+    "score_range": [0, 1],
+    "recommended_thresholds": {
+      "safe": 0.1,
+      "acceptable": 0.2,
+      "high_risk": 0.5
+    },
+    "when_to_use": [
+      "Content moderation",
+      "User-generated content",
+      "Public-facing AI responses",
+      "Safety-critical applications"
+    ],
+    "when_not_to_use": [
+      "When offensive content is expected/allowed",
+      "Creative or edgy content generation"
+    ],
+    "cost_per_evaluation": "Low - uses toxicity detection models",
+    "implementation_notes": "Lower scores indicate safer content"
+  },
+  "bias": {
+    "name": "Bias Detection",
+    "description": "Identifies biased language, stereotypes, or unfair representations",
+    "score_range": [0, 1],
+    "recommended_thresholds": {
+      "fair": 0.1,
+      "concerning": 0.3,
+      "highly_biased": 0.6
+    },
+    "when_to_use": [
+      "Content generation",
+      "Recommendation systems",
+      "Hiring/recruitment AI",
+      "Public policy AI"
+    ],
+    "when_not_to_use": [
+      "When bias analysis isn't relevant",
+      "Highly domain-specific content"
+    ],
+    "cost_per_evaluation": "Medium - requires nuanced analysis",
+    "implementation_notes": "Lower scores indicate less biased content"
+  },
+  "hallucination": {
+    "name": "Hallucination Detection",
+    "description": "Identifies fabricated information or claims not supported by evidence",
+    "score_range": [0, 1],
+    "recommended_thresholds": {
+      "factual": 0.1,
+      "some_fabrication": 0.3,
+      "highly_hallucinated": 0.7
+    },
+    "when_to_use": [
+      "Factual content generation",
+      "Knowledge-based QA",
+      "Citation-dependent responses"
+    ],
+    "when_not_to_use": [
+      "Creative writing",
+      "Hypothetical scenarios",
+      "Speculative content"
+    ],
+    "cost_per_evaluation": "High - requires fact-checking",
+    "implementation_notes": "Lower scores indicate more factual content"
+  },
+  "g_eval": {
+    "name": "G-Eval",
+    "description": "Custom evaluation using LLM-as-judge with specific criteria and rubrics",
+    "score_range": [0, 1],
+    "recommended_thresholds": {
+      "excellent": 0.9,
+      "good": 0.8,
+      "acceptable": 0.7
+    },
+    "when_to_use": [
+      "Custom quality criteria",
+      "Complex evaluation requirements",
+      "Domain-specific standards"
+    ],
+    "when_not_to_use": [
+      "When standard metrics suffice",
+      "High-volume evaluation needs"
+    ],
+    "cost_per_evaluation": "High - requires LLM calls",
+    "implementation_notes": "Highly customizable but expensive"
+  },
+  "tool_correctness": {
+    "name": "Tool Correctness",
+    "description": "Evaluates if AI agent selects and uses tools appropriately",
+    "score_range": [0, 1],
+    "recommended_thresholds": {
+      "correct": 0.9,
+      "acceptable": 0.7,
+      "needs_improvement": 0.5
+    },
+    "when_to_use": [
+      "AI agent evaluation",
+      "Tool-using systems",
+      "Function calling assessment"
+    ],
+    "when_not_to_use": [
+      "Non-agent systems",
+      "Systems without tool use"
+    ],
+    "cost_per_evaluation": "Medium",
+    "implementation_notes": "Assesses tool selection and parameter correctness"
+  },
+  "step_efficiency": {
+    "name": "Step Efficiency",
+    "description": "Measures if AI agent completes tasks with optimal number of steps",
+    "score_range": [0, 1],
+    "recommended_thresholds": {
+      "optimal": 0.9,
+      "acceptable": 0.7,
+      "inefficient": 0.5
+    },
+    "when_to_use": [
+      "AI agent evaluation",
+      "Multi-step task completion",
+      "Workflow optimization"
+    ],
+    "when_not_to_use": [
+      "Single-step tasks",
+      "When efficiency isn't critical"
+    ],
+    "cost_per_evaluation": "Low",
+    "implementation_notes": "Compares actual steps to optimal path"
+  },
+  "goal_accuracy": {
+    "name": "Goal Accuracy",
+    "description": "Assesses if AI agent achieves intended objectives",
+    "score_range": [0, 1],
+    "recommended_thresholds": {
+      "successful": 0.95,
+      "partial_success": 0.7,
+      "failed": 0.3
+    },
+    "when_to_use": [
+      "AI agent evaluation",
+      "Goal-oriented systems",
+      "Task completion assessment"
+    ],
+    "when_not_to_use": [
+      "Exploratory or open-ended tasks",
+      "When goals are subjective"
+    ],
+    "cost_per_evaluation": "Medium",
+    "implementation_notes": "Evaluates goal achievement vs. requirements"
+  },
+  "task_completion": {
+    "name": "Task Completion",
+    "description": "Measures if assigned tasks are fully completed successfully",
+    "score_range": [0, 1],
+    "recommended_thresholds": {
+      "completed": 0.95,
+      "mostly_completed": 0.8,
+      "incomplete": 0.4
+    },
+    "when_to_use": [
+      "Task-oriented AI",
+      "Workflow completion",
+      "Assignment fulfillment"
+    ],
+    "when_not_to_use": [
+      "Open-ended creative tasks",
+      "Exploratory activities"
+    ],
+    "cost_per_evaluation": "Medium",
+    "implementation_notes": "Binary or graded completion assessment"
+  },
+  "knowledge_retention": {
+    "name": "Knowledge Retention",
+    "description": "Evaluates if AI maintains and correctly applies learned information",
+    "score_range": [0, 1],
+    "recommended_thresholds": {
+      "excellent": 0.9,
+      "good": 0.8,
+      "needs_refresh": 0.6
+    },
+    "when_to_use": [
+      "Long-context tasks",
+      "Knowledge-based systems",
+      "Memory-dependent applications"
+    ],
+    "when_not_to_use": [
+      "Stateless interactions",
+      "Real-time only systems"
+    ],
+    "cost_per_evaluation": "Medium",
+    "implementation_notes": "Tests retention of previously provided information"
+  }
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "codegen_001",
+    "problem": "Write a Python function to calculate the factorial of a number using recursion.",
+    "expected_solution": "def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    return n * factorial(n - 1)",
+    "category": "recursion",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "codegen_002",
+    "problem": "Create a React component that displays a list of items with delete buttons.",
+    "expected_solution": "import React, { useState } from 'react';\n\nconst ItemList = () => {\n  const [items, setItems] = useState(['Item 1', 'Item 2', 'Item 3']);\n  \n  const deleteItem = (index) => {\n    setItems(items.filter((_, i) => i !== index));\n  };\n  \n  return (\n    <ul>\n      {items.map((item, index) => (\n        <li key={index}>\n          {item}\n          <button onClick={() => deleteItem(index)}>Delete</button>\n        </li>\n      ))}\n    </ul>\n  );\n};\n\nexport default ItemList;",
+    "category": "react_component",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.85, "answer_relevancy": 0.9}
+  },
+  {
+    "id": "codegen_003",
+    "problem": "Write a SQL query to find the top 5 customers by total order value.",
+    "expected_solution": "SELECT customer_id, customer_name, SUM(order_total) as total_value\nFROM orders\nJOIN customers ON orders.customer_id = customers.id\nGROUP BY customer_id, customer_name\nORDER BY total_value DESC\nLIMIT 5;",
+    "category": "sql_query",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "codegen_004",
+    "problem": "Implement a binary search algorithm in Python.",
+    "expected_solution": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    \n    return -1",
+    "category": "algorithms",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "codegen_005",
+    "problem": "Create a Node.js Express route that handles POST requests to create a new user.",
+    "expected_solution": "const express = require('express');\nconst router = express.Router();\n\nconst users = []; // In a real app, this would be a database\n\nrouter.post('/users', (req, res) => {\n  const { name, email } = req.body;\n  \n  if (!name || !email) {\n    return res.status(400).json({ error: 'Name and email are required' });\n  }\n  \n  const newUser = {\n    id: users.length + 1,\n    name,\n    email\n  };\n  \n  users.push(newUser);\n  res.status(201).json(newUser);\n});\n\nmodule.exports = router;",
+    "category": "nodejs_api",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.85, "answer_relevancy": 0.9}
+  },
+  {
+    "id": "codegen_006",
+    "problem": "Write a Python class for a simple bank account with deposit and withdraw methods.",
+    "expected_solution": "class BankAccount:\n    def __init__(self, initial_balance=0):\n        self.balance = initial_balance\n    \n    def deposit(self, amount):\n        if amount > 0:\n            self.balance += amount\n            return True\n        return False\n    \n    def withdraw(self, amount):\n        if amount > 0 and self.balance >= amount:\n            self.balance -= amount\n            return True\n        return False\n    \n    def get_balance(self):\n        return self.balance",
+    "category": "object_oriented",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "codegen_007",
+    "problem": "Create an HTML form with validation for email and password fields.",
+    "expected_solution": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Login Form</title>\n</head>\n<body>\n    <form id=\"loginForm\">\n        <div>\n            <label for=\"email\">Email:</label>\n            <input type=\"email\" id=\"email\" name=\"email\" required>\n        </div>\n        <div>\n            <label for=\"password\">Password:</label>\n            <input type=\"password\" id=\"password\" name=\"password\" minlength=\"8\" required>\n        </div>\n        <button type=\"submit\">Login</button>\n    </form>\n    \n    <script>\n        document.getElementById('loginForm').addEventListener('submit', function(e) {\n            e.preventDefault();\n            const email = document.getElementById('email').value;\n            const password = document.getElementById('password').value;\n            \n            if (!email.includes('@')) {\n                alert('Please enter a valid email');\n                return;\n            }\n            \n            if (password.length < 8) {\n                alert('Password must be at least 8 characters');\n                return;\n            }\n            \n            alert('Login successful!');\n        });\n    </script>\n</body>\n</html>",
+    "category": "html_javascript",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.8, "answer_relevancy": 0.9}
+  },
+  {
+    "id": "codegen_008",
+    "problem": "Write a Rust function that reverses a string.",
+    "expected_solution": "fn reverse_string(s: &str) -> String {\n    s.chars().rev().collect()\n}",
+    "category": "rust_basics",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.95, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "codegen_009",
+    "problem": "Create a CSS flexbox layout for a 3-column responsive grid.",
+    "expected_solution": ".container {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 20px;\n}\n\n.column {\n  flex: 1 1 300px;\n  min-width: 250px;\n}\n\n/* Usage in HTML:\n<div class=\"container\">\n  <div class=\"column\">Content 1</div>\n  <div class=\"column\">Content 2</div>\n  <div class=\"column\">Content 3</div>\n</div>\n*/",
+    "category": "css_layout",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "codegen_010",
+    "problem": "Write a Java method to sort an array using bubble sort.",
+    "expected_solution": "public static void bubbleSort(int[] arr) {\n    int n = arr.length;\n    for (int i = 0; i < n - 1; i++) {\n        for (int j = 0; j < n - i - 1; j++) {\n            if (arr[j] > arr[j + 1]) {\n                // Swap arr[j] and arr[j+1]\n                int temp = arr[j];\n                arr[j] = arr[j + 1];\n                arr[j + 1] = temp;\n            }\n        }\n    }\n}",
+    "category": "java_algorithms",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "codegen_011",
+    "problem": "Create a Docker Compose file for a web application with PostgreSQL.",
+    "expected_solution": "version: '3.8'\nservices:\n  web:\n    build: .\n    ports:\n      - \"3000:3000\"\n    environment:\n      - DATABASE_URL=postgresql://user:password@db:5432/myapp\n    depends_on:\n      - db\n  db:\n    image: postgres:15\n    environment:\n      - POSTGRES_USER=user\n      - POSTGRES_PASSWORD=password\n      - POSTGRES_DB=myapp\n    volumes:\n      - postgres_data:/var/lib/postgresql/data\nvolumes:\n  postgres_data:",
+    "category": "docker_compose",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.85, "answer_relevancy": 0.9}
+  },
+  {
+    "id": "codegen_012",
+    "problem": "Write a Python function to check if a string is a palindrome.",
+    "expected_solution": "def is_palindrome(s):\n    # Remove non-alphanumeric and convert to lowercase\n    cleaned = ''.join(c.lower() for c in s if c.isalnum())\n    return cleaned == cleaned[::-1]",
+    "category": "string_manipulation",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "codegen_013",
+    "problem": "Create a REST API endpoint in Go using Gin framework.",
+    "expected_solution": "package main\n\nimport (\n\t\"net/http\"\n\t\"github.com/gin-gonic/gin\"\n)\n\nfunc main() {\n\tr := gin.Default()\n\t\n\tr.GET(\"/api/users\", func(c *gin.Context) {\n\t\tusers := []map[string]interface{}{\n\t\t\t{\"id\": 1, \"name\": \"John Doe\"},\n\t\t\t{\"id\": 2, \"name\": \"Jane Smith\"},\n\t\t}\n\t\tc.JSON(http.StatusOK, gin.H{\"users\": users})\n\t})\n\t\n\tr.Run(\":8080\")\n}",
+    "category": "go_web_api",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.85, "answer_relevancy": 0.9}
+  },
+  {
+    "id": "codegen_014",
+    "problem": "Write a C++ class for a simple calculator with basic operations.",
+    "expected_solution": "#include <iostream>\n\nclass Calculator {\nprivate:\n    double result;\npublic:\n    Calculator() : result(0) {}\n    \n    void add(double value) { result += value; }\n    void subtract(double value) { result -= value; }\n    void multiply(double value) { result *= value; }\n    void divide(double value) {\n        if (value != 0) result /= value;\n    }\n    \n    double getResult() { return result; }\n    void clear() { result = 0; }\n};",
+    "category": "cpp_class",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.85, "answer_relevancy": 0.9}
+  },
+  {
+    "id": "codegen_015",
+    "problem": "Create a bash script to backup files to a tar archive.",
+    "expected_solution": "#!/bin/bash\n\n# Backup script\nBACKUP_DIR=\"/home/user/backup\"\nSOURCE_DIR=\"/home/user/documents\"\nTIMESTAMP=$(date +\"%Y%m%d_%H%M%S\")\nBACKUP_FILE=\"$BACKUP_DIR/backup_$TIMESTAMP.tar.gz\"\n\n# Create backup directory if it doesn't exist\nmkdir -p \"$BACKUP_DIR\"\n\n# Create compressed archive\ntar -czf \"$BACKUP_FILE\" \"$SOURCE_DIR\"\n\necho \"Backup created: $BACKUP_FILE\"\n\n# Optional: Remove backups older than 30 days\nfind \"$BACKUP_DIR\" -name \"backup_*.tar.gz\" -mtime +30 -delete",
+    "category": "bash_scripting",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.85, "answer_relevancy": 0.9}
+  },
+  {
+    "id": "codegen_016",
+    "problem": "Write a TypeScript interface and class for a user management system.",
+    "expected_solution": "interface User {\n  id: number;\n  name: string;\n  email: string;\n  isActive: boolean;\n}\n\nclass UserManager {\n  private users: User[] = [];\n  \n  addUser(user: Omit<User, 'id'>): User {\n    const newUser: User = {\n      ...user,\n      id: this.users.length + 1,\n    };\n    this.users.push(newUser);\n    return newUser;\n  }\n  \n  getUserById(id: number): User | undefined {\n    return this.users.find(user => user.id === id);\n  }\n  \n  getActiveUsers(): User[] {\n    return this.users.filter(user => user.isActive);\n  }\n}",
+    "category": "typescript_oop",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.85, "answer_relevancy": 0.9}
+  },
+  {
+    "id": "codegen_017",
+    "problem": "Create a PHP function to validate an email address.",
+    "expected_solution": "<?php\nfunction validateEmail($email) {\n    // Remove whitespace\n    $email = trim($email);\n    \n    // Check basic format\n    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {\n        return false;\n    }\n    \n    // Additional checks can be added here\n    // e.g., check against disposable email lists\n    \n    return true;\n}\n\n// Usage\nif (validateEmail('user@example.com')) {\n    echo 'Valid email';\n} else {\n    echo 'Invalid email';\n}\n?>",
+    "category": "php_validation",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "codegen_018",
+    "problem": "Write a Kotlin data class and function to calculate BMI.",
+    "expected_solution": "data class Person(val name: String, val weightKg: Double, val heightM: Double)\n\nfun calculateBMI(person: Person): Double {\n    return person.weightKg / (person.heightM * person.heightM)\n}\n\nfun getBMICategory(bmi: Double): String {\n    return when {\n        bmi < 18.5 -> \"Underweight\"\n        bmi < 25.0 -> \"Normal weight\"\n        bmi < 30.0 -> \"Overweight\"\n        else -> \"Obese\"\n    }\n}",
+    "category": "kotlin_data_class",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "codegen_019",
+    "problem": "Create a Swift struct for representing geographic coordinates.",
+    "expected_solution": "import Foundation\n\nstruct Coordinate {\n    let latitude: Double\n    let longitude: Double\n    \n    init(latitude: Double, longitude: Double) {\n        self.latitude = max(-90.0, min(90.0, latitude))\n        self.longitude = max(-180.0, min(180.0, longitude))\n    }\n    \n    func distance(to other: Coordinate) -> Double {\n        let lat1 = latitude * .pi / 180\n        let lon1 = longitude * .pi / 180\n        let lat2 = other.latitude * .pi / 180\n        let lon2 = other.longitude * .pi / 180\n        \n        let dLat = lat2 - lat1\n        let dLon = lon2 - lon1\n        \n        let a = sin(dLat/2) * sin(dLat/2) + cos(lat1) * cos(lat2) * sin(dLon/2) * sin(dLon/2)\n        let c = 2 * atan2(sqrt(a), sqrt(1-a))\n        \n        return 6371 * c // Earth radius in kilometers\n    }\n}",
+    "category": "swift_struct",
+    "difficulty": "hard",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.8, "answer_relevancy": 0.9}
+  },
+  {
+    "id": "codegen_020",
+    "problem": "Write a Ruby method to find the longest common prefix in an array of strings.",
+    "expected_solution": "def longest_common_prefix(strs)\n  return \"\" if strs.empty?\n  \n  prefix = strs[0]\n  strs[1..].each do |str|\n    while str.index(prefix) != 0\n      prefix = prefix[0...-1]\n      return \"\" if prefix.empty?\n    end\n  end\n  \n  prefix\nend",
+    "category": "ruby_algorithm",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.85, "answer_relevancy": 0.9}
+  }
+]

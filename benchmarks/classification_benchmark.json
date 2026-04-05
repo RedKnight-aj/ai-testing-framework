@@ -1,0 +1,182 @@
+[
+  {
+    "id": "class_001",
+    "text": "The Federal Reserve announced today that it will maintain interest rates at their current level of 5.25-5.50%, marking the third consecutive meeting without a change.",
+    "expected_label": "finance",
+    "category": "news_topic",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.95, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "class_002",
+    "text": "This pasta recipe requires fresh basil, garlic, olive oil, and parmesan cheese. Cook the pasta al dente and toss with the sauce.",
+    "expected_label": "food",
+    "category": "content_topic",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.95, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "class_003",
+    "text": "The patient presents with fever, cough, and shortness of breath. Chest X-ray shows bilateral infiltrates consistent with pneumonia.",
+    "expected_label": "medical",
+    "category": "document_type",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "class_004",
+    "text": "The new smartphone features a 6.5-inch OLED display, 128GB storage, and a triple camera system with 48MP main sensor.",
+    "expected_label": "technology",
+    "category": "product_category",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.95, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "class_005",
+    "text": "The meeting is scheduled for 3 PM tomorrow in conference room B. Please bring your quarterly reports.",
+    "expected_label": "neutral",
+    "category": "sentiment",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "class_006",
+    "text": "This is absolutely amazing! Best purchase I've ever made and the customer service was outstanding.",
+    "expected_label": "positive",
+    "category": "sentiment",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.95, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "class_007",
+    "text": "The algorithm uses gradient descent to minimize the loss function during training.",
+    "expected_label": "technical",
+    "category": "content_complexity",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "class_008",
+    "text": "The Romantic period in music spanned from approximately 1800 to 1910, featuring composers like Beethoven, Chopin, and Wagner.",
+    "expected_label": "arts",
+    "category": "academic_discipline",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.85, "answer_relevancy": 0.9}
+  },
+  {
+    "id": "class_009",
+    "text": "The quarterback threw a 45-yard touchdown pass with 2 minutes remaining in the game.",
+    "expected_label": "sports",
+    "category": "news_topic",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.95, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "class_010",
+    "text": "The study analyzed data from 1,247 participants across 15 countries to examine the relationship between diet and cardiovascular health.",
+    "expected_label": "research",
+    "category": "document_type",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "class_011",
+    "text": "The new tax legislation will provide incentives for renewable energy investments and impose penalties on high-emission industries.",
+    "expected_label": "politics",
+    "category": "news_topic",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.85, "answer_relevancy": 0.9}
+  },
+  {
+    "id": "class_012",
+    "text": "This product is terrible. I waited 3 weeks for delivery and when it arrived, it was damaged. Customer service was unhelpful.",
+    "expected_label": "negative",
+    "category": "sentiment",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.95, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "class_013",
+    "text": "The mitochondria are organelles responsible for cellular respiration and energy production in eukaryotic cells.",
+    "expected_label": "science",
+    "category": "academic_discipline",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.95, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "class_014",
+    "text": "The restaurant had decent food but the service was extremely slow and the waiter was rude.",
+    "expected_label": "mixed",
+    "category": "sentiment",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.8, "answer_relevancy": 0.9}
+  },
+  {
+    "id": "class_015",
+    "text": "The Supreme Court ruled 6-3 that the state's redistricting plan violated the Voting Rights Act.",
+    "expected_label": "legal",
+    "category": "news_topic",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "class_016",
+    "text": "The application provides real-time analytics, automated reporting, and integration with cloud storage services.",
+    "expected_label": "business",
+    "category": "content_topic",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.85, "answer_relevancy": 0.9}
+  },
+  {
+    "id": "class_017",
+    "text": "The yoga class was relaxing and the instructor was very knowledgeable. However, the studio was too crowded.",
+    "expected_label": "mixed",
+    "category": "sentiment",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.8, "answer_relevancy": 0.9}
+  },
+  {
+    "id": "class_018",
+    "text": "The novel explores themes of identity, belonging, and cultural displacement through the protagonist's journey of self-discovery.",
+    "expected_label": "literature",
+    "category": "content_topic",
+    "difficulty": "hard",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.8, "answer_relevancy": 0.9}
+  },
+  {
+    "id": "class_019",
+    "text": "The company reported quarterly earnings of $2.4 billion, exceeding analyst expectations by 15%.",
+    "expected_label": "finance",
+    "category": "news_topic",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.95, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "class_020",
+    "text": "The archaeological excavation revealed pottery fragments, tools, and structural remains dating back to the Bronze Age.",
+    "expected_label": "history",
+    "category": "academic_discipline",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  }
+]

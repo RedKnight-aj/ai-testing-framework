@@ -1,0 +1,182 @@
+[
+  {
+    "id": "summ_001",
+    "source_text": "The Federal Reserve announced today that it will maintain interest rates at their current level of 5.25-5.50%, marking the third consecutive meeting without a change. Fed Chair Jerome Powell emphasized that while inflation has cooled significantly from its September peak of 3.7% to 3.2% currently, the central bank remains cautious about declaring victory. The decision was unanimous among voting members. Markets reacted positively, with the S&P 500 gaining 1.2% in afternoon trading. Analysts predict the first rate cut could come as early as March 2025 if inflation continues its downward trajectory. The labor market shows resilience with unemployment holding steady at 4.1%, though wage growth has moderated from earlier peaks.",
+    "expected_summary": "The Federal Reserve held interest rates steady at 5.25-5.50% for the third meeting, with Chair Powell noting inflation's decline from 3.7% to 3.2% but remaining cautious. Markets rose 1.2%, and analysts expect potential rate cuts by March 2025.",
+    "category": "financial_news",
+    "difficulty": "medium",
+    "metrics": ["summarization_score", "faithfulness"],
+    "thresholds": {"summarization_score": 0.8, "faithfulness": 0.9}
+  },
+  {
+    "id": "summ_002",
+    "source_text": "Photosynthesis is the process by which green plants and some other organisms use sunlight to synthesize foods with the help of chlorophyll pigments. During photosynthesis, plants take in carbon dioxide from the air and water from the roots, converting these into glucose and oxygen through a series of chemical reactions. The process occurs in two main stages: the light-dependent reactions that occur in the thylakoid membranes of chloroplasts, and the light-independent Calvin cycle that takes place in the stroma. Light energy is captured by chlorophyll and converted into chemical energy in the form of ATP and NADPH. These energy carriers power the Calvin cycle, where carbon dioxide is fixed into organic molecules. The overall equation for photosynthesis is: 6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂.",
+    "expected_summary": "Photosynthesis is the process where plants use sunlight, chlorophyll, carbon dioxide, and water to produce glucose and oxygen. It occurs in two stages: light-dependent reactions in thylakoid membranes capturing energy as ATP/NADPH, and the Calvin cycle fixing CO₂ into organic molecules.",
+    "category": "biology_science",
+    "difficulty": "medium",
+    "metrics": ["summarization_score", "faithfulness"],
+    "thresholds": {"summarization_score": 0.85, "faithfulness": 0.95}
+  },
+  {
+    "id": "summ_003",
+    "source_text": "Machine learning is a subset of artificial intelligence that enables computers to learn and improve from experience without being explicitly programmed. The field encompasses various algorithms and techniques including supervised learning, where models learn from labeled training data; unsupervised learning, which finds hidden patterns in unlabeled data; and reinforcement learning, where agents learn through trial and error with reward signals. Deep learning, a subset of machine learning, uses neural networks with multiple layers to model complex patterns. Applications of machine learning include image recognition, natural language processing, recommendation systems, autonomous vehicles, medical diagnosis, and financial trading. The field has grown rapidly due to advances in computing power, availability of large datasets, and algorithmic improvements. However, challenges remain in areas such as interpretability, bias mitigation, and ensuring ethical deployment of ML systems.",
+    "expected_summary": "Machine learning enables computers to learn from experience without explicit programming, encompassing supervised, unsupervised, and reinforcement learning approaches. Deep learning uses multi-layered neural networks for complex pattern recognition. Applications include image recognition, NLP, and autonomous systems, though challenges exist in interpretability and ethics.",
+    "category": "technology_ai",
+    "difficulty": "hard",
+    "metrics": ["summarization_score", "faithfulness"],
+    "thresholds": {"summarization_score": 0.8, "faithfulness": 0.9}
+  },
+  {
+    "id": "summ_004",
+    "source_text": "The Magna Carta, signed in 1215 by King John of England, is considered one of the most important documents in the history of democracy and constitutional law. The charter was forced upon the king by rebellious barons who were dissatisfied with his arbitrary rule, heavy taxation, and disregard for feudal rights. The document established several key principles including the rule of law, due process, and limitations on the king's power. Although many clauses were specific to medieval feudal law, the Magna Carta's emphasis on the idea that even monarchs are subject to the law influenced the development of constitutional governments worldwide. It served as a foundation for later documents like the U.S. Constitution and the Universal Declaration of Human Rights. The original charter had 63 clauses, though only a few remain in effect today, including those guaranteeing the right to a fair trial and prohibiting unlawful imprisonment.",
+    "expected_summary": "The Magna Carta (1215) limited King John's power and established rule of law principles, influencing modern constitutional governments. Though many clauses addressed feudal concerns, its core ideas of due process and legal accountability shaped documents like the U.S. Constitution.",
+    "category": "history_law",
+    "difficulty": "medium",
+    "metrics": ["summarization_score", "faithfulness"],
+    "thresholds": {"summarization_score": 0.85, "faithfulness": 0.9}
+  },
+  {
+    "id": "summ_005",
+    "source_text": "Climate change refers to long-term shifts in temperatures and weather patterns, primarily caused by human activities that increase greenhouse gas concentrations in the atmosphere. The main contributors include burning fossil fuels for energy, deforestation, industrial processes, and agricultural practices. These activities release carbon dioxide, methane, and other greenhouse gases that trap heat in the atmosphere, leading to global warming. Effects of climate change include rising sea levels, more frequent extreme weather events, biodiversity loss, and disruptions to agriculture and water supplies. Mitigation strategies include transitioning to renewable energy sources, improving energy efficiency, reforestation, and developing carbon capture technologies. International agreements like the Paris Accord aim to limit global temperature rise to well below 2°C above pre-industrial levels. Adaptation measures include building resilient infrastructure, developing drought-resistant crops, and improving disaster preparedness.",
+    "expected_summary": "Climate change results from human activities releasing greenhouse gases, causing global warming and effects like rising seas and extreme weather. Mitigation includes renewable energy transition and carbon capture, while adaptation involves resilient infrastructure and disaster preparedness.",
+    "category": "environmental_science",
+    "difficulty": "medium",
+    "metrics": ["summarization_score", "faithfulness"],
+    "thresholds": {"summarization_score": 0.8, "faithfulness": 0.9}
+  },
+  {
+    "id": "summ_006",
+    "source_text": "The American Revolution (1775-1783) was a political and military conflict between Great Britain and its thirteen North American colonies. Tensions had been building due to British taxation policies, lack of colonial representation in Parliament, and restrictions on westward expansion. Key events included the Boston Tea Party (1773), the First Continental Congress (1774), and the battles of Lexington and Concord (1775). The Declaration of Independence was adopted on July 4, 1776, articulating colonial grievances and proclaiming the colonies' right to self-government. Military campaigns included victories at Saratoga (1777) and Yorktown (1781), with French military support proving crucial. The Treaty of Paris (1783) formally ended the war, recognizing American independence. The revolution established principles of republican government and individual rights that influenced democratic movements worldwide. However, the new nation faced challenges including creating a stable government and addressing issues of slavery and Native American relations.",
+    "expected_summary": "The American Revolution (1775-1783) resulted from British taxation and lack of representation, culminating in the Declaration of Independence (1776). Key victories at Saratoga and Yorktown, with French aid, led to the Treaty of Paris (1783) establishing American independence and republican principles.",
+    "category": "american_history",
+    "difficulty": "hard",
+    "metrics": ["summarization_score", "faithfulness"],
+    "thresholds": {"summarization_score": 0.8, "faithfulness": 0.85}
+  },
+  {
+    "id": "summ_007",
+    "source_text": "Quantum computing harnesses the principles of quantum mechanics to perform computations that would be impossible or impractical for classical computers. Unlike classical bits that exist in states of 0 or 1, quantum bits (qubits) can exist in superposition, representing both states simultaneously. This property, along with quantum entanglement and interference, allows quantum computers to explore multiple solutions in parallel. Current quantum computers use various physical systems including superconducting circuits, trapped ions, and photonic systems. Major challenges include qubit stability (decoherence), error correction, and scaling to large numbers of qubits. Applications of quantum computing include factoring large numbers (relevant to cryptography), simulating molecular interactions for drug discovery, optimizing complex systems, and machine learning. Companies like IBM, Google, and Rigetti are developing quantum hardware, while software ecosystems are emerging around frameworks like Qiskit and Cirq.",
+    "expected_summary": "Quantum computing uses qubits in superposition and entanglement to solve problems intractable for classical computers. Challenges include decoherence and error correction. Applications span cryptography, drug discovery, optimization, and machine learning, with companies like IBM and Google developing quantum hardware.",
+    "category": "quantum_computing",
+    "difficulty": "hard",
+    "metrics": ["summarization_score", "faithfulness"],
+    "thresholds": {"summarization_score": 0.75, "faithfulness": 0.9}
+  },
+  {
+    "id": "summ_008",
+    "source_text": "The Industrial Revolution, beginning in Britain around 1760 and spreading globally, marked a transition from agrarian economies to industrialized ones. Key innovations included the steam engine, mechanized textile production, and iron manufacturing. The revolution began in the textile industry with inventions like the spinning jenny and power loom, which dramatically increased production efficiency. Transportation improved with railways and steamships, facilitating global trade. Urbanization accelerated as people moved from rural areas to cities for factory work. Working conditions were often poor, with long hours, child labor, and dangerous environments. Social reforms eventually led to labor laws, unions, and improved working conditions. The revolution also spurred scientific and technological advancements, laying the foundation for modern industrial society. Environmental impacts included pollution and resource depletion, while economic effects included rising living standards and increased global interconnectedness.",
+    "expected_summary": "The Industrial Revolution (1760s onward) transformed economies from agrarian to industrial through innovations like steam engines and mechanized textiles. It caused rapid urbanization and improved transportation but also created poor working conditions that eventually led to labor reforms and modern industrial society.",
+    "category": "industrial_history",
+    "difficulty": "medium",
+    "metrics": ["summarization_score", "faithfulness"],
+    "thresholds": {"summarization_score": 0.8, "faithfulness": 0.9}
+  },
+  {
+    "id": "summ_009",
+    "source_text": "Blockchain technology is a decentralized, distributed ledger system that records transactions across multiple computers in a way that makes it difficult to alter or hack. The technology was invented in 2008 by an anonymous person or group known as Satoshi Nakamoto as the underlying technology for Bitcoin. A blockchain consists of blocks of data linked together using cryptographic techniques, with each block containing a list of transactions, a timestamp, and a reference to the previous block. Consensus mechanisms like Proof of Work or Proof of Stake ensure all participants agree on the validity of transactions. Beyond cryptocurrencies, blockchain applications include supply chain tracking, voting systems, digital identity verification, and smart contracts. Advantages include transparency, security, and elimination of intermediaries. Challenges include scalability limitations, energy consumption (for PoW), and regulatory uncertainty. Second-generation blockchains like Ethereum introduced programmable smart contracts, enabling decentralized applications (dApps).",
+    "expected_summary": "Blockchain is a decentralized ledger system using cryptographic links between data blocks, invented for Bitcoin in 2008. Consensus mechanisms ensure transaction validity. Beyond crypto, applications include supply chains and smart contracts, offering transparency but facing scalability and energy challenges.",
+    "category": "blockchain_technology",
+    "difficulty": "medium",
+    "metrics": ["summarization_score", "faithfulness"],
+    "thresholds": {"summarization_score": 0.8, "faithfulness": 0.9}
+  },
+  {
+    "id": "summ_010",
+    "source_text": "Mental health encompasses emotional, psychological, and social well-being, affecting how individuals think, feel, and behave. Common mental health conditions include depression, anxiety disorders, bipolar disorder, schizophrenia, and eating disorders. Factors contributing to mental health issues include genetic predisposition, brain chemistry, trauma, stress, and environmental factors. Early intervention and treatment are crucial for positive outcomes. Treatment approaches include psychotherapy (such as cognitive-behavioral therapy), medication, lifestyle changes, and support systems. Stigma surrounding mental health remains a significant barrier to seeking help. Prevention strategies include stress management, regular exercise, healthy sleep habits, and strong social connections. Workplace mental health programs and school-based interventions can promote well-being. Cultural attitudes toward mental health vary widely, and addressing stigma requires education and awareness campaigns. Access to mental health services remains unequal globally, with low-income and marginalized communities disproportionately affected.",
+    "expected_summary": "Mental health involves emotional and psychological well-being, with conditions like depression and anxiety affected by genetics, trauma, and environment. Treatment includes therapy and medication; prevention involves healthy habits. Stigma and unequal access remain significant challenges.",
+    "category": "mental_health",
+    "difficulty": "medium",
+    "metrics": ["summarization_score", "faithfulness"],
+    "thresholds": {"summarization_score": 0.8, "faithfulness": 0.9}
+  },
+  {
+    "id": "summ_011",
+    "source_text": "The periodic table organizes chemical elements by atomic number, electron configuration, and recurring chemical properties. Dmitri Mendeleev created the first version in 1869, arranging elements by atomic weight and leaving gaps for undiscovered elements. Modern tables arrange elements by atomic number, with rows (periods) and columns (groups) reflecting electron shell filling patterns. Elements in the same group share similar chemical properties. The table includes metals, nonmetals, and metalloids. Special regions include the alkali metals (Group 1), alkaline earth metals (Group 2), transition metals, halogens (Group 17), and noble gases (Group 18). Radioactive elements appear at the bottom. The table continues to expand with newly discovered elements. Understanding the periodic table is fundamental to chemistry, predicting element behavior and compound formation. It serves as a cornerstone of chemical education and research.",
+    "expected_summary": "The periodic table organizes elements by atomic number and properties, created by Mendeleev in 1869. Elements are arranged in periods and groups with similar chemical behaviors. It includes metals, nonmetals, metalloids, and special groups like alkali metals and noble gases.",
+    "category": "chemistry_periodic_table",
+    "difficulty": "easy",
+    "metrics": ["summarization_score", "faithfulness"],
+    "thresholds": {"summarization_score": 0.85, "faithfulness": 0.95}
+  },
+  {
+    "id": "summ_012",
+    "source_text": "Renewable energy sources provide sustainable alternatives to fossil fuels, helping combat climate change and reduce dependence on finite resources. Solar energy converts sunlight into electricity using photovoltaic panels or concentrated solar power systems. Wind energy harnesses kinetic energy from moving air using turbines. Hydroelectric power generates electricity from flowing water in dams or run-of-river systems. Geothermal energy utilizes heat from Earth's core for electricity generation and direct heating. Biomass converts organic matter into energy through combustion or biochemical processes. Advantages include reduced greenhouse gas emissions, energy security, and job creation. Challenges include intermittency (for solar and wind), high initial costs, and land use impacts. Technological advancements continue to improve efficiency and reduce costs. Global renewable energy capacity has grown rapidly, with solar and wind leading the expansion. Policy support through incentives and carbon pricing accelerates adoption. The transition to renewables is essential for achieving climate goals and sustainable development.",
+    "expected_summary": "Renewable energy sources like solar, wind, hydro, geothermal, and biomass provide sustainable alternatives to fossil fuels, reducing emissions but facing challenges like intermittency and high costs. Global capacity grows rapidly, driven by technological advances and policy support.",
+    "category": "renewable_energy",
+    "difficulty": "medium",
+    "metrics": ["summarization_score", "faithfulness"],
+    "thresholds": {"summarization_score": 0.8, "faithfulness": 0.9}
+  },
+  {
+    "id": "summ_013",
+    "source_text": "Artificial intelligence (AI) refers to the simulation of human intelligence in machines designed to think, learn, and perform tasks autonomously. Machine learning, a subset of AI, enables systems to improve performance through data analysis without explicit programming. Deep learning uses neural networks with multiple layers to process complex data patterns. Natural language processing allows computers to understand and generate human language. Computer vision enables machines to interpret visual information. AI applications span healthcare (diagnostic assistance), finance (fraud detection), transportation (autonomous vehicles), and entertainment (recommendation systems). Ethical considerations include algorithmic bias, job displacement, privacy concerns, and autonomous weapon systems. The field has evolved from rule-based expert systems to modern neural networks powered by massive datasets and computational resources. Future developments may include artificial general intelligence capable of human-like reasoning across domains. Responsible AI development requires transparency, accountability, and human oversight.",
+    "expected_summary": "AI simulates human intelligence through machine learning and deep learning, enabling applications in healthcare, finance, and transportation. While offering significant benefits, AI raises ethical concerns about bias, privacy, and job displacement, requiring responsible development practices.",
+    "category": "artificial_intelligence",
+    "difficulty": "hard",
+    "metrics": ["summarization_score", "faithfulness"],
+    "thresholds": {"summarization_score": 0.75, "faithfulness": 0.9}
+  },
+  {
+    "id": "summ_014",
+    "source_text": "The human brain contains approximately 86 billion neurons connected through trillions of synapses, forming complex neural networks that enable cognition, emotion, and behavior. The cerebral cortex, the brain's outer layer, handles higher-order functions like reasoning, language, and sensory processing. Subcortical structures including the thalamus, hypothalamus, and brainstem regulate basic functions like hunger, sleep, and heart rate. The limbic system processes emotions and memory formation. Neuroplasticity allows the brain to reorganize neural pathways in response to learning and experience. Brain development continues from prenatal stages through adolescence. Neurotransmitters like dopamine, serotonin, and norepinephrine mediate neural communication. Brain imaging techniques including fMRI and PET scans enable visualization of brain activity. Neurological disorders can result from genetic factors, trauma, infections, or environmental toxins. Understanding brain function remains one of neuroscience's greatest challenges, with ongoing research into consciousness, memory, and neurological diseases.",
+    "expected_summary": "The human brain contains 86 billion neurons forming complex networks for cognition, emotion, and behavior. Key structures include the cerebral cortex for higher functions, limbic system for emotions, and subcortical areas for basic regulation. Neuroplasticity enables learning, while neurotransmitters facilitate neural communication.",
+    "category": "neuroscience_brain",
+    "difficulty": "hard",
+    "metrics": ["summarization_score", "faithfulness"],
+    "thresholds": {"summarization_score": 0.75, "faithfulness": 0.9}
+  },
+  {
+    "id": "summ_015",
+    "source_text": "Democracy is a system of government where supreme power is vested in the people and exercised by them directly or indirectly through a system of representation, usually involving periodically held free elections. Key principles include popular sovereignty, rule of law, protection of human rights, and separation of powers. Representative democracy uses elected representatives to make decisions on behalf of citizens. Direct democracy allows citizens to vote directly on laws and policies. Liberal democracies combine democratic governance with constitutional protections for individual rights and freedoms. Challenges to democracy include political polarization, disinformation, authoritarian backsliding, and economic inequality. Voter participation rates vary widely, with compulsory voting in some countries. Democratic institutions require protection against corruption and undue influence. The quality of democracy can be measured through indicators like freedom of press, judicial independence, and electoral integrity. Global democracy has experienced both expansions and contractions throughout history.",
+    "expected_summary": "Democracy vests power in people through direct or representative systems with free elections. Key principles include popular sovereignty, rule of law, and human rights protection. Challenges include polarization, disinformation, and corruption, requiring institutional safeguards.",
+    "category": "political_science",
+    "difficulty": "medium",
+    "metrics": ["summarization_score", "faithfulness"],
+    "thresholds": {"summarization_score": 0.8, "faithfulness": 0.9}
+  },
+  {
+    "id": "summ_016",
+    "source_text": "The internet originated from ARPANET, a U.S. Department of Defense network developed in the 1960s for research and military communications. The World Wide Web, invented by Tim Berners-Lee in 1989, popularized the internet through hypertext documents and web browsers. TCP/IP protocols enable data routing across networks. Domain Name System (DNS) translates human-readable domain names into IP addresses. HTTP and HTTPS protocols facilitate web browsing and secure communications. Modern internet infrastructure includes fiber optic cables, satellites, and wireless networks. Content delivery networks (CDNs) improve performance by caching content closer to users. The internet has evolved from text-based systems to multimedia platforms supporting video streaming, social media, e-commerce, and cloud computing. Net neutrality debates concern equal treatment of all internet traffic. Cybersecurity threats include hacking, malware, and data breaches. Internet governance involves complex relationships between governments, corporations, and international organizations. Digital divide issues affect access in developing regions.",
+    "expected_summary": "The internet evolved from ARPANET through the World Wide Web invention in 1989, using TCP/IP and DNS for global connectivity. Modern infrastructure supports multimedia applications but faces challenges like cybersecurity threats and digital divide issues.",
+    "category": "internet_history",
+    "difficulty": "medium",
+    "metrics": ["summarization_score", "faithfulness"],
+    "thresholds": {"summarization_score": 0.8, "faithfulness": 0.9}
+  },
+  {
+    "id": "summ_017",
+    "source_text": "Supply chain management involves coordinating activities from raw material sourcing through production to final delivery of products to customers. Key components include procurement, manufacturing, warehousing, transportation, and distribution. Effective supply chain management requires balancing cost efficiency with service quality and responsiveness. Just-in-time (JIT) inventory systems minimize holding costs but require reliable suppliers. Technology plays crucial role with enterprise resource planning (ERP) systems, RFID tracking, and predictive analytics. Risk management addresses disruptions from natural disasters, geopolitical events, and supplier failures. Sustainability considerations include reducing carbon footprints, ethical sourcing, and circular economy practices. Globalization has increased supply chain complexity with international suppliers and regulations. Digital transformation enables real-time visibility and automated decision-making. Performance metrics include on-time delivery rates, inventory turnover, and customer satisfaction scores. Future trends include blockchain for traceability, AI for demand forecasting, and autonomous logistics systems.",
+    "expected_summary": "Supply chain management coordinates procurement through delivery, balancing efficiency and quality. Technology like ERP and AI enables optimization, while risk management and sustainability address disruptions and environmental concerns in globalized operations.",
+    "category": "supply_chain_management",
+    "difficulty": "medium",
+    "metrics": ["summarization_score", "faithfulness"],
+    "thresholds": {"summarization_score": 0.8, "faithfulness": 0.9}
+  },
+  {
+    "id": "summ_018",
+    "source_text": "Cryptocurrencies are digital assets that use cryptographic techniques to secure transactions and control the creation of new units. Bitcoin, introduced in 2008 by Satoshi Nakamoto, was the first cryptocurrency and remains the most valuable by market capitalization. Blockchain technology underlies most cryptocurrencies, providing decentralized transaction verification without central authorities. Ethereum introduced smart contracts, enabling programmable money and decentralized applications. Altcoins include various cryptocurrencies with different features like privacy coins (Monero), stablecoins pegged to fiat currencies (USDT), and utility tokens for specific applications. Mining or staking validates transactions and creates new coins in proof-of-work or proof-of-stake systems. Market volatility, regulatory uncertainty, and security concerns challenge widespread adoption. Applications extend beyond payments to decentralized finance (DeFi), non-fungible tokens (NFTs), and tokenization of real-world assets. Environmental impact of energy-intensive mining has prompted shift toward more sustainable consensus mechanisms.",
+    "expected_summary": "Cryptocurrencies like Bitcoin and Ethereum use blockchain for secure, decentralized transactions. Features include smart contracts, various consensus mechanisms, and applications in DeFi and NFTs, though challenges include volatility, regulation, and environmental concerns.",
+    "category": "cryptocurrency",
+    "difficulty": "medium",
+    "metrics": ["summarization_score", "faithfulness"],
+    "thresholds": {"summarization_score": 0.8, "faithfulness": 0.9}
+  },
+  {
+    "id": "summ_019",
+    "source_text": "Sustainable development aims to meet present needs without compromising future generations' ability to meet theirs. The concept, popularized by the 1987 Brundtland Report, integrates environmental protection, social equity, and economic growth. United Nations Sustainable Development Goals (SDGs) provide a global framework with 17 goals including no poverty, zero hunger, good health, quality education, gender equality, clean water, affordable energy, decent work, industry innovation, reduced inequalities, sustainable cities, responsible consumption, climate action, life below water, life on land, peace and justice, and global partnerships. Implementation requires cooperation between governments, businesses, civil society, and individuals. Economic instruments like carbon taxes and subsidies for renewables support sustainable practices. Technological innovation drives solutions in renewable energy, circular economy, and precision agriculture. Monitoring progress uses indicators tracking environmental health, social well-being, and economic performance. Challenges include political will, funding gaps, and balancing competing interests across sectors.",
+    "expected_summary": "Sustainable development meets current needs without compromising future generations, integrating environment, society, and economy. UN SDGs provide 17 global goals requiring multi-stakeholder cooperation, technological innovation, and balanced implementation across sectors.",
+    "category": "sustainable_development",
+    "difficulty": "hard",
+    "metrics": ["summarization_score", "faithfulness"],
+    "thresholds": {"summarization_score": 0.75, "faithfulness": 0.9}
+  },
+  {
+    "id": "summ_020",
+    "source_text": "The human genome contains approximately 3 billion base pairs organized into 23 chromosome pairs. Genome sequencing technology has advanced from the Human Genome Project's completion in 2003 to modern high-throughput sequencing capable of sequencing entire genomes in hours. Genetic variation includes single nucleotide polymorphisms (SNPs), insertions/deletions, and structural variants. Genome-wide association studies (GWAS) identify genetic variants associated with diseases and traits. CRISPR-Cas9 gene editing enables precise genetic modifications for research and potential therapies. Pharmacogenomics tailors drug treatments based on genetic profiles. Epigenetics studies heritable changes in gene expression without DNA sequence changes. Personal genomics companies offer direct-to-consumer genetic testing for ancestry and health insights. Ethical considerations include privacy of genetic information, eugenics concerns, and equitable access to genomic medicine. Future applications include gene therapies for inherited diseases, personalized medicine, and synthetic biology. Global initiatives like the 1000 Genomes Project and UK Biobank advance genomic research and clinical applications.",
+    "expected_summary": "The human genome contains 3 billion base pairs with extensive genetic variation. Sequencing technology evolved rapidly, enabling GWAS, CRISPR editing, and pharmacogenomics. Applications include personalized medicine and gene therapies, raising ethical concerns about privacy and access.",
+    "category": "genomics_human",
+    "difficulty": "hard",
+    "metrics": ["summarization_score", "faithfulness"],
+    "thresholds": {"summarization_score": 0.75, "faithfulness": 0.9}
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "id": "rag_001",
+    "query": "What is the difference between supervised and unsupervised learning?",
+    "context": [
+      "Supervised learning is a machine learning approach where models are trained on labeled datasets, meaning each training example includes both input data and the correct output.",
+      "Unsupervised learning algorithms analyze unlabeled data to discover hidden patterns, groupings, or structures without explicit guidance on what to find.",
+      "Common supervised learning algorithms include decision trees, random forests, support vector machines, and neural networks used for classification and regression tasks.",
+      "Popular unsupervised techniques include k-means clustering, hierarchical clustering, principal component analysis (PCA), and autoencoders."
+    ],
+    "expected_answer": "Supervised learning uses labeled data with known outputs, while unsupervised learning finds patterns in unlabeled data without predefined answers.",
+    "category": "machine_learning_basics",
+    "difficulty": "easy",
+    "metrics": ["answer_relevancy", "faithfulness", "contextual_precision"],
+    "thresholds": {"answer_relevancy": 0.8, "faithfulness": 0.9, "contextual_precision": 0.85}
+  },
+  {
+    "id": "rag_002",
+    "query": "Explain how photosynthesis works in plants.",
+    "context": [
+      "Photosynthesis is the process by which green plants convert sunlight, carbon dioxide, and water into glucose and oxygen.",
+      "The light-dependent reactions occur in the thylakoid membranes, capturing light energy with chlorophyll pigments.",
+      "The Calvin cycle (light-independent reactions) fixes carbon dioxide into organic molecules in the stroma of chloroplasts.",
+      "ATP and NADPH produced in light reactions provide energy for glucose synthesis in the Calvin cycle."
+    ],
+    "expected_answer": "Photosynthesis converts light energy into chemical energy using chlorophyll, carbon dioxide, and water to produce glucose and oxygen through light-dependent and light-independent reactions.",
+    "category": "biology_photosynthesis",
+    "difficulty": "medium",
+    "metrics": ["answer_relevancy", "faithfulness", "contextual_recall"],
+    "thresholds": {"answer_relevancy": 0.85, "faithfulness": 0.9, "contextual_recall": 0.8}
+  },
+  {
+    "id": "rag_003",
+    "query": "What are the main causes of World War I?",
+    "context": [
+      "The assassination of Archduke Franz Ferdinand in Sarajevo on June 28, 1914, triggered the outbreak of World War I.",
+      "Underlying causes included nationalism, imperialism, militarism, and the system of alliances between European powers.",
+      "The alliance system created a domino effect where the assassination led Austria-Hungary to declare war on Serbia, bringing in Russia, Germany, France, and Britain.",
+      "Economic rivalries and arms races between nations contributed to the tense pre-war atmosphere."
+    ],
+    "expected_answer": "World War I was caused by the assassination of Archduke Franz Ferdinand, nationalism, imperialism, militarism, and the European alliance system.",
+    "category": "history_wwi",
+    "difficulty": "medium",
+    "metrics": ["answer_relevancy", "faithfulness", "summarization_score"],
+    "thresholds": {"answer_relevancy": 0.8, "faithfulness": 0.85, "summarization_score": 0.75}
+  },
+  {
+    "id": "rag_004",
+    "query": "How does the human immune system respond to viral infections?",
+    "context": [
+      "The innate immune system provides the first line of defense with physical barriers, phagocytes, and natural killer cells.",
+      "Adaptive immunity involves B cells producing antibodies and T cells attacking infected cells, with immunological memory for future responses.",
+      "Cytokines released during infection coordinate the immune response and can cause inflammation symptoms like fever.",
+      "Vaccines work by stimulating adaptive immunity to create immunological memory without causing disease."
+    ],
+    "expected_answer": "The immune system uses innate defenses (barriers, phagocytes) and adaptive responses (antibodies, T cells, memory) to fight viral infections, coordinated by cytokines.",
+    "category": "biology_immunity",
+    "difficulty": "hard",
+    "metrics": ["answer_relevancy", "faithfulness", "contextual_relevancy"],
+    "thresholds": {"answer_relevancy": 0.85, "faithfulness": 0.9, "contextual_relevancy": 0.8}
+  },
+  {
+    "id": "rag_005",
+    "query": "What is quantum entanglement and why is it important?",
+    "context": [
+      "Quantum entanglement occurs when two or more particles become correlated such that the state of one instantly influences the state of the other, regardless of distance.",
+      "Einstein called this 'spooky action at a distance,' but experiments have confirmed it's real and not limited by the speed of light.",
+      "Entanglement is fundamental to quantum computing, quantum cryptography, and quantum teleportation.",
+      "Measuring one entangled particle instantly determines the state of its partner, violating classical intuitions about locality."
+    ],
+    "expected_answer": "Quantum entanglement links particles so their states are correlated instantly across any distance, enabling quantum computing and secure communication.",
+    "category": "physics_quantum",
+    "difficulty": "hard",
+    "metrics": ["answer_relevancy", "faithfulness", "g_eval"],
+    "thresholds": {"answer_relevancy": 0.8, "faithfulness": 0.85, "g_eval": 0.75}
+  },
+  {
+    "id": "rag_006",
+    "query": "What are the key principles of democracy?",
+    "context": [
+      "Democracy is a system of government where people have the power to elect their leaders and hold them accountable.",
+      "Key principles include popular sovereignty (government by the people), rule of law, protection of human rights, and free elections.",
+      "Separation of powers between executive, legislative, and judicial branches prevents concentration of authority.",
+      "Freedom of speech, press, assembly, and regular elections are essential components of democratic governance."
+    ],
+    "expected_answer": "Democracy's key principles are popular sovereignty, rule of law, human rights protection, free elections, and separation of powers.",
+    "category": "political_science",
+    "difficulty": "easy",
+    "metrics": ["answer_relevancy", "faithfulness", "contextual_precision"],
+    "thresholds": {"answer_relevancy": 0.9, "faithfulness": 0.9, "contextual_precision": 0.85}
+  },
+  {
+    "id": "rag_007",
+    "query": "How do search engines like Google work?",
+    "context": [
+      "Search engines use web crawlers (spiders) to discover and index web pages across the internet.",
+      "The indexing process creates a searchable database of web content, storing information about each page's content and metadata.",
+      "When users search, algorithms rank results based on relevance, using factors like keyword matching, page authority, and user behavior.",
+      "Modern search engines use machine learning and AI to understand user intent and provide more accurate results."
+    ],
+    "expected_answer": "Search engines crawl the web to index pages, then use algorithms to rank and retrieve relevant results based on user queries.",
+    "category": "computer_science",
+    "difficulty": "medium",
+    "metrics": ["answer_relevancy", "faithfulness", "contextual_recall"],
+    "thresholds": {"answer_relevancy": 0.85, "faithfulness": 0.9, "contextual_recall": 0.8}
+  },
+  {
+    "id": "rag_008",
+    "query": "What is the impact of climate change on biodiversity?",
+    "context": [
+      "Climate change affects biodiversity by altering habitats, shifting species ranges, and disrupting ecosystems.",
+      "Rising temperatures cause coral bleaching, reduce polar ice habitats, and change migration patterns.",
+      "Extreme weather events like droughts and floods threaten species survival and ecosystem stability.",
+      "Biodiversity loss from climate change includes species extinction, reduced genetic diversity, and ecosystem collapse."
+    ],
+    "expected_answer": "Climate change reduces biodiversity through habitat alteration, species range shifts, extreme weather impacts, and ecosystem disruption.",
+    "category": "environmental_science",
+    "difficulty": "medium",
+    "metrics": ["answer_relevancy", "faithfulness", "summarization_score"],
+    "thresholds": {"answer_relevancy": 0.8, "faithfulness": 0.85, "summarization_score": 0.75}
+  },
+  {
+    "id": "rag_009",
+    "query": "How does the stock market function?",
+    "context": [
+      "Stock markets are platforms where shares of publicly traded companies are bought and sold.",
+      "Investors buy stocks hoping to profit from price appreciation and dividends, while companies raise capital for growth.",
+      "Stock prices are determined by supply and demand, influenced by company performance, economic conditions, and investor sentiment.",
+      "Regulators oversee markets to ensure fair trading, prevent fraud, and maintain market integrity."
+    ],
+    "expected_answer": "Stock markets enable buying/selling of company shares, allowing companies to raise capital and investors to profit from price changes and dividends.",
+    "category": "finance_economics",
+    "difficulty": "easy",
+    "metrics": ["answer_relevancy", "faithfulness", "contextual_relevancy"],
+    "thresholds": {"answer_relevancy": 0.85, "faithfulness": 0.9, "contextual_relevancy": 0.8}
+  },
+  {
+    "id": "rag_010",
+    "query": "What are the benefits and risks of artificial intelligence?",
+    "context": [
+      "AI benefits include automation of repetitive tasks, improved decision-making through data analysis, medical diagnostics, and scientific research acceleration.",
+      "Risks involve job displacement, privacy concerns, algorithmic bias, autonomous weapon systems, and loss of human agency.",
+      "AI can enhance healthcare through better diagnostics and personalized treatment plans.",
+      "However, AI systems can perpetuate societal biases if trained on biased data, and advanced AI could pose existential risks."
+    ],
+    "expected_answer": "AI offers benefits like automation, better decision-making, and medical advances, but risks include job loss, bias, privacy issues, and existential threats.",
+    "category": "technology_ai",
+    "difficulty": "medium",
+    "metrics": ["answer_relevancy", "faithfulness", "g_eval"],
+    "thresholds": {"answer_relevancy": 0.8, "faithfulness": 0.85, "g_eval": 0.75}
+  },
+  {
+    "id": "rag_011",
+    "query": "Explain the water cycle in nature.",
+    "context": [
+      "The water cycle involves evaporation, condensation, precipitation, and collection of water through Earth's systems.",
+      "Solar energy causes water to evaporate from oceans, lakes, and rivers into water vapor in the atmosphere.",
+      "Water vapor condenses into clouds when it cools, forming droplets that fall as precipitation (rain, snow, hail).",
+      "Water returns to Earth through runoff, infiltration into groundwater, and plant transpiration."
+    ],
+    "expected_answer": "The water cycle includes evaporation of water by sun, condensation into clouds, precipitation back to Earth, and collection through runoff and infiltration.",
+    "category": "earth_science",
+    "difficulty": "easy",
+    "metrics": ["answer_relevancy", "faithfulness", "contextual_precision"],
+    "thresholds": {"answer_relevancy": 0.9, "faithfulness": 0.9, "contextual_precision": 0.85}
+  },
+  {
+    "id": "rag_012",
+    "query": "What is the significance of the Magna Carta?",
+    "context": [
+      "The Magna Carta, signed in 1215, was a charter of rights agreed to by King John of England and forced upon him by rebellious barons.",
+      "It established the principle that everyone, including the king, was subject to the law and could be held accountable.",
+      "Key provisions limited the king's power, protected certain rights of the Church and barons, and established due process.",
+      "The Magna Carta influenced the development of constitutional law and concepts of individual rights in many countries."
+    ],
+    "expected_answer": "The Magna Carta (1215) limited the king's power, established rule of law principles, and influenced modern concepts of rights and constitutional government.",
+    "category": "history_medieval",
+    "difficulty": "medium",
+    "metrics": ["answer_relevancy", "faithfulness", "contextual_recall"],
+    "thresholds": {"answer_relevancy": 0.85, "faithfulness": 0.9, "contextual_recall": 0.8}
+  },
+  {
+    "id": "rag_013",
+    "query": "How do vaccines work to prevent disease?",
+    "context": [
+      "Vaccines introduce weakened or inactivated pathogens, or parts of pathogens, to stimulate the immune system without causing disease.",
+      "The immune system learns to recognize and remember the pathogen, creating immunological memory for future encounters.",
+      "When exposed to the real pathogen, the immune system can mount a rapid response, preventing or reducing disease severity.",
+      "Herd immunity occurs when enough people are vaccinated to reduce pathogen circulation in the population."
+    ],
+    "expected_answer": "Vaccines stimulate the immune system to create antibodies and memory cells against pathogens, enabling rapid response to future infections and providing immunity.",
+    "category": "biology_vaccines",
+    "difficulty": "medium",
+    "metrics": ["answer_relevancy", "faithfulness", "summarization_score"],
+    "thresholds": {"answer_relevancy": 0.85, "faithfulness": 0.9, "summarization_score": 0.75}
+  },
+  {
+    "id": "rag_014",
+    "query": "What is the theory of evolution by natural selection?",
+    "context": [
+      "Charles Darwin's theory of evolution by natural selection explains how species change over time through inherited traits.",
+      "Natural selection occurs when individuals with advantageous traits survive and reproduce more successfully than others.",
+      "Over generations, beneficial traits become more common in the population, leading to adaptation to the environment.",
+      "Evidence for evolution includes the fossil record, comparative anatomy, embryology, and molecular biology."
+    ],
+    "expected_answer": "Natural selection favors individuals with advantageous traits that survive and reproduce more, leading to species adaptation and evolution over generations.",
+    "category": "biology_evolution",
+    "difficulty": "medium",
+    "metrics": ["answer_relevancy", "faithfulness", "contextual_relevancy"],
+    "thresholds": {"answer_relevancy": 0.85, "faithfulness": 0.9, "contextual_relevancy": 0.8}
+  },
+  {
+    "id": "rag_015",
+    "query": "How does the internet function technically?",
+    "context": [
+      "The internet is a global network of interconnected computers communicating using standardized protocols like TCP/IP.",
+      "Data is broken into packets that are routed through network devices to their destination using IP addresses.",
+      "DNS (Domain Name System) translates human-readable domain names into IP addresses.",
+      "HTTP/HTTPS protocols enable web browsing, while other protocols support email, file transfer, and streaming."
+    ],
+    "expected_answer": "The internet uses TCP/IP protocols to route data packets between computers, with DNS translating domain names to IP addresses for communication.",
+    "category": "computer_networking",
+    "difficulty": "hard",
+    "metrics": ["answer_relevancy", "faithfulness", "g_eval"],
+    "thresholds": {"answer_relevancy": 0.8, "faithfulness": 0.85, "g_eval": 0.75}
+  },
+  {
+    "id": "rag_016",
+    "query": "What causes economic recessions?",
+    "context": [
+      "Economic recessions occur when there is a significant decline in economic activity lasting several months.",
+      "Common causes include monetary policy tightening, financial crises, supply shocks, and loss of consumer/business confidence.",
+      "The 2008 recession was triggered by the subprime mortgage crisis and banking system collapse.",
+      "Recessions can be cyclical (part of business cycles) or structural (requiring fundamental economic changes)."
+    ],
+    "expected_answer": "Recessions result from declines in economic activity caused by monetary tightening, financial crises, supply shocks, or loss of confidence.",
+    "category": "economics_recessions",
+    "difficulty": "medium",
+    "metrics": ["answer_relevancy", "faithfulness", "contextual_precision"],
+    "thresholds": {"answer_relevancy": 0.8, "faithfulness": 0.85, "contextual_precision": 0.8}
+  },
+  {
+    "id": "rag_017",
+    "query": "How do black holes form and behave?",
+    "context": [
+      "Black holes form when massive stars collapse at the end of their life cycle, or through other processes like merging neutron stars.",
+      "The Schwarzschild radius defines the event horizon beyond which nothing can escape the black hole's gravitational pull.",
+      "Black holes have three properties: mass, spin, and electric charge, according to the no-hair theorem.",
+      "Hawking radiation theoretically causes black holes to evaporate over extremely long timescales."
+    ],
+    "expected_answer": "Black holes form from collapsed massive stars and have an event horizon from which nothing escapes; they possess mass, spin, and charge.",
+    "category": "physics_blackholes",
+    "difficulty": "hard",
+    "metrics": ["answer_relevancy", "faithfulness", "contextual_recall"],
+    "thresholds": {"answer_relevancy": 0.8, "faithfulness": 0.9, "contextual_recall": 0.8}
+  },
+  {
+    "id": "rag_018",
+    "query": "What is the role of the United Nations?",
+    "context": [
+      "The United Nations (UN) is an international organization founded in 1945 to promote peace, security, and cooperation.",
+      "Key organs include the Security Council, General Assembly, Secretariat, Economic and Social Council, and International Court of Justice.",
+      "The UN works on peacekeeping, humanitarian aid, development assistance, human rights protection, and conflict prevention.",
+      "It has 193 member states and its headquarters is in New York City."
+    ],
+    "expected_answer": "The UN promotes international peace, security, and cooperation through peacekeeping, humanitarian aid, and addressing global challenges.",
+    "category": "international_relations",
+    "difficulty": "easy",
+    "metrics": ["answer_relevancy", "faithfulness", "summarization_score"],
+    "thresholds": {"answer_relevancy": 0.9, "faithfulness": 0.9, "summarization_score": 0.75}
+  },
+  {
+    "id": "rag_019",
+    "query": "How does machine learning differ from traditional programming?",
+    "context": [
+      "Traditional programming involves explicit rules and algorithms written by programmers for specific tasks.",
+      "Machine learning algorithms learn patterns from data without being explicitly programmed for each scenario.",
+      "ML systems improve performance as they process more data, while traditional programs perform consistently but don't learn.",
+      "Machine learning excels at pattern recognition, prediction, and classification tasks that are difficult to program explicitly."
+    ],
+    "expected_answer": "Traditional programming uses explicit rules, while machine learning learns patterns from data and improves with experience.",
+    "category": "ai_ml_difference",
+    "difficulty": "easy",
+    "metrics": ["answer_relevancy", "faithfulness", "contextual_relevancy"],
+    "thresholds": {"answer_relevancy": 0.9, "faithfulness": 0.9, "contextual_relevancy": 0.85}
+  },
+  {
+    "id": "rag_020",
+    "query": "What are the major types of renewable energy sources?",
+    "context": [
+      "Renewable energy sources include solar, wind, hydroelectric, geothermal, and biomass energy.",
+      "Solar energy converts sunlight into electricity using photovoltaic panels or concentrated solar power.",
+      "Wind energy uses turbines to convert kinetic energy from wind into electrical power.",
+      "Hydroelectric power generates electricity from flowing water, while geothermal uses Earth's internal heat."
+    ],
+    "expected_answer": "Major renewable energy sources are solar, wind, hydroelectric, geothermal, and biomass.",
+    "category": "energy_renewable",
+    "difficulty": "easy",
+    "metrics": ["answer_relevancy", "faithfulness", "contextual_precision"],
+    "thresholds": {"answer_relevancy": 0.9, "faithfulness": 0.9, "contextual_precision": 0.85}
+  }
+]

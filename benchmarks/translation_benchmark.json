@@ -1,0 +1,222 @@
+[
+  {
+    "id": "trans_001",
+    "source_text": "Hello, how are you today?",
+    "target_text": "Hola, ¿cómo estás hoy?",
+    "source_lang": "en",
+    "target_lang": "es",
+    "domain": "greeting",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.95, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "trans_002",
+    "source_text": "The quick brown fox jumps over the lazy dog.",
+    "target_text": "El rápido zorro marrón salta sobre el perro perezoso.",
+    "source_lang": "en",
+    "target_lang": "es",
+    "domain": "general",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.95, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "trans_003",
+    "source_text": "I would like to book a table for two at 7 PM tonight.",
+    "target_text": "Me gustaría reservar una mesa para dos a las 7 PM esta noche.",
+    "source_lang": "en",
+    "target_lang": "es",
+    "domain": "hospitality",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "trans_004",
+    "source_text": "The meeting has been rescheduled to next Monday at 2 PM.",
+    "target_text": "La reunión ha sido reprogramada para el próximo lunes a las 2 PM.",
+    "source_lang": "en",
+    "target_lang": "es",
+    "domain": "business",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "trans_005",
+    "source_text": "Machine learning algorithms can predict customer behavior patterns.",
+    "target_text": "Los algoritmos de aprendizaje automático pueden predecir patrones de comportamiento del cliente.",
+    "source_lang": "en",
+    "target_lang": "es",
+    "domain": "technology",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.85, "answer_relevancy": 0.9}
+  },
+  {
+    "id": "trans_006",
+    "source_text": "Bonjour, je voudrais commander un café au lait et une baguette.",
+    "target_text": "Hello, I would like to order a café au lait and a baguette.",
+    "source_lang": "fr",
+    "target_lang": "en",
+    "domain": "food_order",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "trans_007",
+    "source_text": "Die Konferenz findet am nächsten Freitag im Hauptsaal statt.",
+    "target_text": "The conference takes place next Friday in the main hall.",
+    "source_lang": "de",
+    "target_lang": "en",
+    "domain": "business",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "trans_008",
+    "source_text": "El paciente presenta síntomas de hipertensión arterial.",
+    "target_text": "The patient presents symptoms of arterial hypertension.",
+    "source_lang": "es",
+    "target_lang": "en",
+    "domain": "medical",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "trans_009",
+    "source_text": "La fotosíntesis es el proceso mediante el cual las plantas convierten la luz solar en energía química.",
+    "target_text": "Photosynthesis is the process by which plants convert sunlight into chemical energy.",
+    "source_lang": "es",
+    "target_lang": "en",
+    "domain": "science",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.85, "answer_relevancy": 0.9}
+  },
+  {
+    "id": "trans_010",
+    "source_text": "Il contratto sarà firmato domani mattina alle ore 10:00.",
+    "target_text": "The contract will be signed tomorrow morning at 10:00 AM.",
+    "source_lang": "it",
+    "target_lang": "en",
+    "domain": "legal",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "trans_011",
+    "source_text": "The mitochondrial DNA is inherited exclusively from the mother.",
+    "target_text": "El ADN mitocondrial se hereda exclusivamente de la madre.",
+    "source_lang": "en",
+    "target_lang": "es",
+    "domain": "biology",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "trans_012",
+    "source_text": "Le développement durable nécessite une approche intégrée de l'économie, de l'environnement et du social.",
+    "target_text": "Sustainable development requires an integrated approach to economy, environment, and social aspects.",
+    "source_lang": "fr",
+    "target_lang": "en",
+    "domain": "environment",
+    "difficulty": "hard",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.85, "answer_relevancy": 0.9}
+  },
+  {
+    "id": "trans_013",
+    "source_text": "Die Blockchain-Technologie ermöglicht dezentrale und transparente Transaktionen.",
+    "target_text": "Blockchain technology enables decentralized and transparent transactions.",
+    "source_lang": "de",
+    "target_lang": "en",
+    "domain": "technology",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "trans_014",
+    "source_text": "स्वादिष्ट भोजन बनाने के लिए समय और मेहनत की आवश्यकता होती है।",
+    "target_text": "Making delicious food requires time and effort.",
+    "source_lang": "hi",
+    "target_lang": "en",
+    "domain": "general",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.85, "answer_relevancy": 0.9}
+  },
+  {
+    "id": "trans_015",
+    "source_text": "A paciência é uma virtude importante no mundo dos negócios.",
+    "target_text": "Patience is an important virtue in the business world.",
+    "source_lang": "pt",
+    "target_lang": "en",
+    "domain": "business",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "trans_016",
+    "source_text": "The quantum entanglement phenomenon defies classical intuitions about locality.",
+    "target_text": "El fenómeno del entrelazamiento cuántico desafía las intuiciones clásicas sobre la localidad.",
+    "source_lang": "en",
+    "target_lang": "es",
+    "domain": "physics",
+    "difficulty": "hard",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.85, "answer_relevancy": 0.9}
+  },
+  {
+    "id": "trans_017",
+    "source_text": "La inteligencia artificial está revolucionando múltiples industrias.",
+    "target_text": "Artificial intelligence is revolutionizing multiple industries.",
+    "source_lang": "es",
+    "target_lang": "en",
+    "domain": "technology",
+    "difficulty": "easy",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.95, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "trans_018",
+    "source_text": "Das Unternehmen hat im letzten Quartal einen Umsatzrekord erzielt.",
+    "target_text": "The company achieved a sales record in the last quarter.",
+    "source_lang": "de",
+    "target_lang": "en",
+    "domain": "business",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "trans_019",
+    "source_text": "Il riscaldamento globale sta causando cambiamenti climatici irreversibili.",
+    "target_text": "Global warming is causing irreversible climate changes.",
+    "source_lang": "it",
+    "target_lang": "en",
+    "domain": "environment",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  },
+  {
+    "id": "trans_020",
+    "source_text": "La neuroplasticidad permite al cerebro reorganizar sus conexiones neuronales.",
+    "target_text": "Neuroplasticity allows the brain to reorganize its neural connections.",
+    "source_lang": "es",
+    "target_lang": "en",
+    "domain": "neuroscience",
+    "difficulty": "medium",
+    "metrics": ["g_eval", "answer_relevancy"],
+    "thresholds": {"g_eval": 0.9, "answer_relevancy": 0.95}
+  }
+]
